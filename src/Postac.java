@@ -4,9 +4,7 @@ public class Postac {
     Lokacja lokacja;
     String imie;
 
-    Postac(Lokacja lokacja) {
-        this.lokacja = lokacja;
-
+    Postac() {
         statystyki = new Statystyki(0,0,0,0,0,0,0);
         ekwipunek = Ekwipunek.zwrocObiekt();
     }

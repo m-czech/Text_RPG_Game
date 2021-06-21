@@ -1,5 +1,13 @@
 public class Plansza {
-    public static Lokacja start, gory, miasto, wies, bagno, las, lochy, zamek, lezeSmoka;
+    public Lokacja start = new Lokacja();
+    public Lokacja gory = new Lokacja();
+    public Lokacja miasto = new Lokacja();
+    public Lokacja wies = new Lokacja();
+    public Lokacja bagno = new Lokacja();
+    public Lokacja las = new Lokacja();
+    public Lokacja lochy = new Lokacja();
+    public Lokacja zamek = new Lokacja();
+    public Lokacja lezeSmoka = new Lokacja();
 
 
     Plansza() {
@@ -8,7 +16,10 @@ public class Plansza {
             lokacje[0] = lochy;
             Zdarzenie[] zdarzenia = new Zdarzenie[1];
             zdarzenia[0] = new Zdarzenie(" ", " ", " ");
-            start = new Lokacja("START", zdarzenia, lokacje);
+
+            start.ustawNazwe("START");
+            start.ustawLokacje(lokacje);
+            start.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[2];
@@ -17,7 +28,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Zostajesz uwieziony w lochach", "Wydostajesz sie z zamkniecia", "Nieudana proba ucieczki");
             zdarzenia[1] = new Zdarzenie("Wspolwiezien napada na Ciebie", "Udaje Ci sie go pokonac", "Zostajesz pobity");
-            start = new Lokacja("Lochy", zdarzenia, lokacje);
+
+            lochy.ustawNazwe("Lochy");
+            lochy.ustawLokacje(lokacje);
+            lochy.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[2];
@@ -26,7 +40,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Pracujesz w polu", "Konczysz prace pierwszego dnia", "Pozostalo jeszcze troche pola do plewienia.\nZostajesz drugi dzien");
             zdarzenia[1] = new Zdarzenie("Romans z wiesniaczkom", "Zyskujesz przychylnosc kobiety", "Nieudana proba podrywu");
-            start = new Lokacja("Wies", zdarzenia, lokacje);
+
+            wies.ustawNazwe("Wies");
+            wies.ustawLokacje(lokacje);
+            wies.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[2];
@@ -35,7 +52,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Spotykasz starego druha", "Idziesz z nim na piwo", "Mezczyzna Cie nie poznaje");
             zdarzenia[1] = new Zdarzenie("Wizyta w karczmie", "Dobrze sie bawisz", "Upijasz sie");
-            start = new Lokacja("Miasto", zdarzenia, lokacje);
+
+            miasto.ustawNazwe("Miasto");
+            miasto.ustawLokacje(lokacje);
+            miasto.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[2];
@@ -44,17 +64,12 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Audiencja z krolem", "Dostajesz nowy miecz", "Krol nie ma dla ciebie zadnego zadania");
             zdarzenia[1] = new Zdarzenie("Uczta na zamku", "Poznajesz duzo nowych ludzi", "Ze wzgledu na twoja range, nikt nie chce z Toba rozmawiac");
-            start = new Lokacja("Zamek", zdarzenia, lokacje);
+
+            zamek.ustawNazwe("Zamek");
+            zamek.ustawLokacje(lokacje);
+            zamek.ustawZdarzenia(zdarzenia);
         }
-        {
-            Lokacja[] lokacje = new Lokacja[2];
-            lokacje[0] = miasto;
-            lokacje[1] = las;
-            Zdarzenie[] zdarzenia = new Zdarzenie[2];
-            zdarzenia[0] = new Zdarzenie("Pracujesz w polu", "Konczysz prace pierwszego dnia", "Pozostalo jeszcze troche pola do plewienia.\nZostajesz drugi dzien");
-            zdarzenia[1] = new Zdarzenie("Romans z wiesniaczkom", "Zyskujesz przychylnosc kobiety", "Nieudana proba podrywu");
-            start = new Lokacja("Wies", zdarzenia, lokacje);
-        }
+
         {
             Lokacja[] lokacje = new Lokacja[2];
             lokacje[0] = bagno;
@@ -62,7 +77,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Walczysz z potworem", "Zwyciestwo", "Zostajesz mocno poturbowany, a potwor ucieka");
             zdarzenia[1] = new Zdarzenie("Zbierasz jagody", "Jestes najedzony i odzyskujesz sily", "Dostajesz zatrucia zoladkowego");
-            start = new Lokacja("Las", zdarzenia, lokacje);
+
+            las.ustawNazwe("Las");
+            las.ustawLokacje(lokacje);
+            las.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[1];
@@ -70,7 +88,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Napotkasz smoka", "Wbijasz miecz w serce potwora pokonujac go", "Ledwo zipiesz i chowasz sie w szczelinie skalnej");
             zdarzenia[1] = new Zdarzenie("Wchodzisz do jaskini smoka, lecz go potwora", "Kradniesz kosztownosci bedacych strzezonych przez monstrum", "Smok Cie dostrzegl. Uciekasz.");
-            start = new Lokacja("Leze smoka", zdarzenia, lokacje);
+
+            lezeSmoka.ustawNazwe("Leze smoka");
+            lezeSmoka.ustawLokacje(lokacje);
+            lezeSmoka.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[1];
@@ -78,7 +99,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Ugrzazles w bagnie", "Lapiesz galaz i ratujesz swoje zycie", "Masz skrepowane ruchy, nastepnego dnia znajduje Cie wiesniak. Jestes wycienczony.");
             zdarzenia[1] = new Zdarzenie("Znajdujesz skarb", "Skarbem okazuje sie nowa bron", "Kufer jest pusty");
-            start = new Lokacja("Bagno", zdarzenia, lokacje);
+
+            bagno.ustawNazwe("Bagno");
+            bagno.ustawLokacje(lokacje);
+            bagno.ustawZdarzenia(zdarzenia);
         }
         {
             Lokacja[] lokacje = new Lokacja[1];
@@ -86,7 +110,10 @@ public class Plansza {
             Zdarzenie[] zdarzenia = new Zdarzenie[2];
             zdarzenia[0] = new Zdarzenie("Wspinasz sie po gorach", "Udaje Ci sie wejsc na szczyt", "Spadasz z duzej wysokosci. Tracisz przytomnosc.");
             zdarzenia[1] = new Zdarzenie("Napasc przez rabusiow", "Jestes za slaby na podjecie walki, ale udaje Ci sie uciec", "Zostajesz okradziony, tracisz osprzet");
-            start = new Lokacja("Gory", zdarzenia, lokacje);
+
+            gory.ustawNazwe("Gory");
+            gory.ustawLokacje(lokacje);
+            gory.ustawZdarzenia(zdarzenia);
         }
 
     }

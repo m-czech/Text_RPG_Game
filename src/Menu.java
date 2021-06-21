@@ -21,12 +21,14 @@ public class Menu {
             System.exit(0);
         }
 
+        Plansza plansza = new Plansza();
 
         BudowniczyPostaci budowniczyPostaci = new BudowniczyWojownika();
         Postac postac;
         budowniczyPostaci.wybierzImie();
         budowniczyPostaci.wybierzStatystyki();
         budowniczyPostaci.wybierzEkwipunek();
+        budowniczyPostaci.wybierzLokacjeStartowa(plansza.start);
         postac = budowniczyPostaci.zwrocPostac();
 
 

@@ -2,10 +2,17 @@ public class Lokacja {
     String nazwa;
     Zdarzenie[] zdarzenia;
     Lokacja[] nastepneLokacje;
-    Lokacja(String nazwa, Zdarzenie[] zdarzenia, Lokacja[] nastepneLokacje) {
-        this.zdarzenia = zdarzenia;
-        this.nastepneLokacje = nastepneLokacje;
+
+    void ustawNazwe(String nazwa) {
         this.nazwa = nazwa;
+    }
+
+    void ustawZdarzenia(Zdarzenie[] zdarzenia) {
+        this.zdarzenia = zdarzenia;
+    }
+
+    void ustawLokacje(Lokacja[] nastepneLokacje) {
+        this.nastepneLokacje = nastepneLokacje;
     }
 
     void losujZdarzenie(Postac postac) {

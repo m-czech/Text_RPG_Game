@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class BudowniczyWojownika implements BudowniczyPostaci {
-    Postac postac = new Postac(Plansza.start);
+    Postac postac = new Postac();
     Scanner scanner = new Scanner(System.in);
 
     public void wybierzImie() {
@@ -18,6 +18,10 @@ public class BudowniczyWojownika implements BudowniczyPostaci {
     public void wybierzEkwipunek() {
         Bron topor = new Miecz();
         postac.ekwipunek.dodajBron(postac, topor);
+    }
+
+    public void wybierzLokacjeStartowa(Lokacja lokacja) {
+        postac.lokacja = lokacja;
     }
 
     public Postac zwrocPostac() {
