@@ -58,6 +58,7 @@ public class Menu {
                 }
 
                 postac.losujZdarzenie();
+                break;
             }
         }
 

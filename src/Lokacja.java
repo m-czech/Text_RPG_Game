@@ -16,13 +16,16 @@ public class Lokacja {
     }
 
     void losujZdarzenie(Postac postac) {
-        Zdarzenie zdarzenie = zdarzenia[RandomNumberGenerator.randomNumberGenerator.nextInt()  % zdarzenia.length];
+        int losowaLiczba = Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt());
+        int losowyIndeks = losowaLiczba % zdarzenia.length;
+        Zdarzenie zdarzenie = zdarzenia[losowyIndeks];
         System.out.println(zdarzenie.nazwa);
         zdarzenie.walcz(postac);
     }
 
     Lokacja nastepnaLokacja() {
-        System.out.println("Podróż do " + nazwa);
-        return nastepneLokacje[RandomNumberGenerator.randomNumberGenerator.nextInt() % nastepneLokacje.length];
+        Lokacja lokacja = nastepneLokacje[RandomNumberGenerator.randomNumberGenerator.nextInt() % nastepneLokacje.length];
+        System.out.println("Podróż do " + lokacja.nazwa);
+        return lokacja;
     }
 }
