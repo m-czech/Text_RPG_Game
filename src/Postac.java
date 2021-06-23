@@ -13,7 +13,7 @@ public class Postac {
         lokacja = lokacja.nastepnaLokacja();
     }
 
-    void losujZdarzenie() {
-        lokacja.losujZdarzenie(this);
+    Zdarzenie losujZdarzenie() {
+        return lokacja.losujZdarzenie(this);
     }
 }

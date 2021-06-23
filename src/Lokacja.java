@@ -15,13 +15,15 @@ public class Lokacja {
         this.nastepneLokacje = nastepneLokacje;
     }
 
-    void losujZdarzenie(Postac postac) {
+    Zdarzenie losujZdarzenie(Postac postac) {
         int losowaLiczba = Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt());
         int losowyIndeks = losowaLiczba % zdarzenia.length;
         Zdarzenie zdarzenie = zdarzenia[losowyIndeks];
         System.out.println(zdarzenie.nazwa);
-        zdarzenie.walcz(postac);
+        return zdarzenie;
     }
+
+
 
     Lokacja nastepnaLokacja() {
         Lokacja lokacja = nastepneLokacje[RandomNumberGenerator.randomNumberGenerator.nextInt() % nastepneLokacje.length];

@@ -22,4 +22,8 @@ public class Ekwipunek {
             secondSlot = nowaBron;
         }
     }
+
+    public void wypisz() {
+
+    }
 }

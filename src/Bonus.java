@@ -8,22 +8,22 @@ public class Bonus {
 
     public static void losujDobryBonus() {
         statystyki = new Statystyki(RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7,
-                RandomNumberGenerator.randomNumberGenerator.nextInt() % 7);
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) % 7);
     }
 
     public static void losujZlyBonus() {
         statystyki = new Statystyki((RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1,
-                (RandomNumberGenerator.randomNumberGenerator.nextInt() % 6) * -1);
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1,
+                (Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt() % 6)) * -1);
     }
 
 

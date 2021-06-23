@@ -13,6 +13,7 @@ public class Zdarzenie {
         if ((RandomNumberGenerator.randomNumberGenerator.nextInt() % 100) + postac.statystyki.sumuj() >= 100) {
             System.out.println(komunikatWygranej);
             Bonus.losujDobryBonus();
+            Bonus.przyznaj(postac);
             return true;
         }
         System.out.println(komunikatPrzegranej);

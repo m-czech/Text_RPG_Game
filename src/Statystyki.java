@@ -21,6 +21,16 @@ public class Statystyki {
         return atak + obrona + bialaMagia + czarnaMagia + perswazja + zasieg + punktyZdrowia;
     }
 
+    public void wypisz() {
+        System.out.println("Punkty zdrowia: " + punktyZdrowia);
+        System.out.println("Atak " + atak);
+        System.out.println("Obrona: " + obrona);
+        System.out.println("Biala magia: " + bialaMagia);
+        System.out.println("Czarna magia: " + czarnaMagia);
+        System.out.println("Zasieg: " + zasieg);
+        System.out.println("Perswazja: " + perswazja);
+    }
+
 
 
 }
