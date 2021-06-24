@@ -6,7 +6,6 @@ public class Ekwipunek {
     Bron drugiSlot;
     private static Ekwipunek ekwipunek;
 
-
     private Ekwipunek() {
         akceptowaneTypyBroni = new LinkedList<>();
     }
@@ -44,7 +43,6 @@ public class Ekwipunek {
         if (pierwszySlot == nowaBron || drugiSlot == nowaBron) {
             System.out.println("Nowy " + nowaBron.zwrocNazweBroni() + " znajduje sie w ekwipunku \n");
         }
-
     }
 
     public void wypisz() {

@@ -34,5 +34,4 @@ public class Zdarzenie {
         rozdajBonusPrzyPrzegranej(postac);
         return false;
     }
-
 }

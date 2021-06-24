@@ -59,6 +59,7 @@ public class Menu {
         System.out.println("'ekwipunek' - wyswietla aktualnie zalozony osprzet");
         System.out.println("'statystyki' - aktualne statystyki postaci'");
         System.out.println("Powodzenia\n");
+
         while(true) {
             String fraza = scanner.nextLine();
             if (fraza.equals("wyjscie")) {
@@ -100,7 +101,6 @@ public class Menu {
                     zdarzenie = postac.losujZdarzenie();
                     break;
                 }
-
             }
 
             while(true) {

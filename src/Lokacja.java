@@ -23,8 +23,6 @@ public class Lokacja {
         return zdarzenie;
     }
 
-
-
     Lokacja nastepnaLokacja() {
         Lokacja lokacja = nastepneLokacje[Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % nastepneLokacje.length];
         System.out.println("Podróż do " + lokacja.nazwa);

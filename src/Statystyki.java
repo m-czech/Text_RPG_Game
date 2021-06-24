@@ -84,6 +84,7 @@ public class Statystyki {
             postac.statystyki.punktyZdrowia += podwyzszoneStatystyki.punktyZdrowia;
             System.out.println("Podniesiono punkty zdrowia o " + podwyzszoneStatystyki.punktyZdrowia);
         }
+
         else if (podwyzszoneStatystyki.punktyZdrowia < 0) {
             postac.statystyki.punktyZdrowia += podwyzszoneStatystyki.punktyZdrowia;
             if (postac.statystyki.punktyZdrowia < 0) {
@@ -96,6 +97,7 @@ public class Statystyki {
             postac.statystyki.perswazja += podwyzszoneStatystyki.perswazja;
             System.out.println("Podniesiono perswazje o " + podwyzszoneStatystyki.perswazja);
         }
+
         else if (podwyzszoneStatystyki.perswazja < 0) {
             postac.statystyki.perswazja += podwyzszoneStatystyki.perswazja;
             if (postac.statystyki.perswazja < 0) {
@@ -115,9 +117,5 @@ public class Statystyki {
             }
             System.out.println("Pomniejszono zasieg o " + podwyzszoneStatystyki.zasieg);
         }
-
     }
-
-
-
 }
