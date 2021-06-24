@@ -16,6 +16,9 @@ public class BudowniczyWojownika implements BudowniczyPostaci {
     }
 
     public void wybierzEkwipunek() {
+        postac.ekwipunek.akceptowaneTypyBroni.add(1);
+        postac.ekwipunek.akceptowaneTypyBroni.add(3);
+
         Bron topor = new Miecz();
         postac.ekwipunek.dodajBron(postac, topor);
     }

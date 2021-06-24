@@ -31,11 +31,14 @@ public class Menu {
         budowniczyPostaci.wybierzLokacjeStartowa(plansza.start);
         postac = budowniczyPostaci.zwrocPostac();
 
-        System.out.println("Witaj!" + postac.imie);
-        System.out.println("Wpisując frazę 'dalej' postac bedzie sie poruszac do kolejnych lokacji");
-        System.out.println("Wpisujac fraze 'wyjscie' nastapi zakonczenie programu");
-        System.out.println("Powodzenia!");
-
+        System.out.println("Witaj, " + postac.imie);
+        System.out.println("Polecenia: ");
+        System.out.println("'dalej' - przejscie do kolejnej lokacji");
+        System.out.println("'losuj zdarzenie' - losowanie zdarzenia w danej lokacji");
+        System.out.println("'wykonaj zadanie' - wykonaj wylosowane zdarzenie");
+        System.out.println("'ekwipunek' - wyswietla aktualnie zalozony osprzet");
+        System.out.println("'statystyki' - aktualne statystyki postaci'");
+        System.out.println("Powodzenia\n");
         while(true) {
             String fraza = scanner.nextLine();
             if (fraza.equals("wyjscie")) {
@@ -44,10 +47,12 @@ public class Menu {
 
             if (fraza.equals("statystyki")) {
                 postac.statystyki.wypisz();
+                continue;
             }
 
-            if (fraza.equals("ekwipuenk")) {
+            if (fraza.equals("ekwipunek")) {
                 postac.ekwipunek.wypisz();
+                continue;
             }
 
             if (!fraza.equals("dalej")) {
@@ -58,6 +63,7 @@ public class Menu {
 
             Zdarzenie zdarzenie;
             while(true) {
+                fraza = scanner.nextLine();
                 if (fraza.equals("wyjscie")) {
                     System.exit(0);
                 }
@@ -66,20 +72,19 @@ public class Menu {
                     postac.statystyki.wypisz();
                 }
 
-                if (fraza.equals("ekwipuenk")) {
+                if (fraza.equals("ekwipunek")) {
                     postac.ekwipunek.wypisz();
                 }
 
-                if (!fraza.equals("losuj lokacje")) {
-                    fraza = scanner.nextLine();
-                    continue;
+                if (fraza.equals("losuj zdarzenie")) {
+                    zdarzenie = postac.losujZdarzenie();
+                    break;
                 }
 
-                zdarzenie = postac.losujZdarzenie();
-                break;
             }
 
             while(true) {
+                fraza = scanner.nextLine();
                 if (fraza.equals("wyjscie")) {
                     System.exit(0);
                 }
@@ -88,23 +93,15 @@ public class Menu {
                     postac.statystyki.wypisz();
                 }
 
-                if (fraza.equals("ekwipuenk")) {
+                if (fraza.equals("ekwipunek")) {
                     postac.ekwipunek.wypisz();
                 }
 
-                if (!fraza.equals("losuj zdarzenie")) {
-                    fraza = scanner.nextLine();
-                    continue;
+                if (fraza.equals("wykonaj zadanie")) {
+                    zdarzenie.walcz(postac);
+                    break;
                 }
-
-                zdarzenie.walcz(postac);
-                break;
             }
         }
-
-
-
-
-
     }
 }

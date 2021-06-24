@@ -1,9 +1,15 @@
+import java.util.LinkedList;
+
 public class Ekwipunek {
-    Bron firstSlot;
-    Bron secondSlot;
+    LinkedList<Integer> akceptowaneTypyBroni;
+    Bron pierwszySlot;
+    Bron drugiSlot;
     private static Ekwipunek ekwipunek;
 
-    private Ekwipunek() { }
+
+    private Ekwipunek() {
+        akceptowaneTypyBroni = new LinkedList<>();
+    }
 
     public static Ekwipunek zwrocObiekt() {
         if (ekwipunek == null) {
@@ -13,17 +19,45 @@ public class Ekwipunek {
     }
 
     public void dodajBron(Postac postac, Bron nowaBron) {
-        nowaBron.podniesStatystyki(postac);
-
-        if (firstSlot == null) {
-            firstSlot = nowaBron;
+        if (pierwszySlot == null) {
+            pierwszySlot = nowaBron;
+            nowaBron.podniesStatystyki(postac);
+        }
+        else if (drugiSlot == null) {
+            drugiSlot = nowaBron;
+            nowaBron.podniesStatystyki(postac);
+        }
+        else if (pierwszySlot.sumujStatystyki() < nowaBron.sumujStatystyki()) {
+            pierwszySlot.zmniejszStatystyki(postac);
+            pierwszySlot = nowaBron;
+            nowaBron.podniesStatystyki(postac);
+        }
+        else if (drugiSlot.sumujStatystyki() < nowaBron.sumujStatystyki()) {
+            drugiSlot.zmniejszStatystyki(postac);
+            drugiSlot = nowaBron;
+            nowaBron.podniesStatystyki(postac);
         }
         else {
-            secondSlot = nowaBron;
+            System.out.println("Znaleziona bron jest slabsza od aktualnie wyposazonych");
         }
+
+        if (pierwszySlot == nowaBron || drugiSlot == nowaBron) {
+            System.out.println("Nowy " + nowaBron.zwrocNazweBroni() + " znajduje sie w ekwipunku");
+        }
+
     }
 
     public void wypisz() {
+        if (pierwszySlot != null) {
+            System.out.println("Broń: " + pierwszySlot.zwrocNazweBroni() + '\n');
+            pierwszySlot.zwrocStatystyki().wypisz();
+            System.out.println();
+        }
 
+        if (drugiSlot != null) {
+            System.out.println("Broń: " + drugiSlot.zwrocNazweBroni() + '\n');
+            drugiSlot.zwrocStatystyki().wypisz();
+            System.out.println();
+        }
     }
 }

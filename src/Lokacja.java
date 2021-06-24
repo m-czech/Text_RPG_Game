@@ -26,7 +26,7 @@ public class Lokacja {
 
 
     Lokacja nastepnaLokacja() {
-        Lokacja lokacja = nastepneLokacje[RandomNumberGenerator.randomNumberGenerator.nextInt() % nastepneLokacje.length];
+        Lokacja lokacja = nastepneLokacje[Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % nastepneLokacje.length];
         System.out.println("Podróż do " + lokacja.nazwa);
         return lokacja;
     }

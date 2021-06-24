@@ -1,25 +1,29 @@
-public class Miecz implements Bron {
+public class Topor implements Bron{
     Statystyki statystyki;
     String nazwa;
-    static int id = 1;
-    Miecz() {
-        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0,0,0,0,0);
-        nazwa = "miecz";
+    static int id = 3;
+    Topor() {
+        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,0,0,0);
+        nazwa = "topor";
     }
 
     public void podniesStatystyki(Postac postac) {
         postac.statystyki.atak += statystyki.atak;
+        postac.statystyki.obrona += statystyki.obrona;
+        System.out.println("Podniesiono nowy " + nazwa);
     }
 
     public void zmniejszStatystyki(Postac postac) {
+        postac.statystyki.obrona -= statystyki.obrona;
+        if (postac.statystyki.obrona < 0) {
+            postac.statystyki.obrona = 0;
+        }
+
         postac.statystyki.atak -= statystyki.atak;
         if (postac.statystyki.atak < 0) {
             postac.statystyki.atak = 0;
         }
-    }
 
-    public static int zwrocIdBroni() {
-        return id;
     }
 
     public String zwrocNazweBroni() {
