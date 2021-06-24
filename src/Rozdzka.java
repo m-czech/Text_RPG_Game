@@ -3,7 +3,7 @@ public class Rozdzka implements Bron {
     String nazwa;
     static int id = 2;
     Rozdzka() {
-        statystyki = new Statystyki(0,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 2);
+        statystyki = new Statystyki(0,-3,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 2);
         nazwa = "rozdzka";
     }
 

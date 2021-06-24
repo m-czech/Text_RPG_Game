@@ -74,8 +74,8 @@ public class Statystyki {
         }
         else if (podwyzszoneStatystyki.obrona < 0) {
             postac.statystyki.obrona += podwyzszoneStatystyki.obrona;
-            if (postac.statystyki.czarnaMagia < 0) {
-                postac.statystyki.czarnaMagia = 0;
+            if (postac.statystyki.obrona < 0) {
+                postac.statystyki.obrona = 0;
             }
             System.out.println("Pomniejszono obrone  o " + podwyzszoneStatystyki.obrona);
         }

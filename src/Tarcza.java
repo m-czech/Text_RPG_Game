@@ -3,7 +3,7 @@ public class Tarcza implements Bron {
     String nazwa;
     static int id = 4;
     Tarcza() {
-        statystyki = new Statystyki(0,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 10,0,0,0,0);
+        statystyki = new Statystyki(0,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 10,0,0,0,-3);
         nazwa = "tarcza";
     }
 
@@ -17,10 +17,6 @@ public class Tarcza implements Bron {
         if (postac.statystyki.obrona < 0) {
             postac.statystyki.obrona = 0;
         }
-    }
-
-    public static int zwrocIdBroni() {
-        return id;
     }
 
     public String zwrocNazweBroni() {

@@ -25,7 +25,7 @@ public class Zdarzenie {
     }
 
     boolean walcz(Postac postac) {
-        if ((Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 90) + postac.statystyki.sumuj() >= 100) {
+        if ((Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 85) + postac.statystyki.sumuj() >= 65) {
             System.out.println(komunikatWygranej);
             rozdajBonusPrzyWygranej(postac);
             return true;

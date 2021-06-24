@@ -3,7 +3,7 @@ public class Pierscien implements Bron {
     String nazwa;
     static int id = 5;
     Pierscien() {
-        statystyki = new Statystyki(Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 6,0,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0);
+        statystyki = new Statystyki(Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 6,0,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,-4);
         nazwa = "pierscien";
     }
 

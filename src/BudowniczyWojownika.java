@@ -10,16 +10,16 @@ public class BudowniczyWojownika implements BudowniczyPostaci {
     }
 
     public void wybierzStatystyki() {
-        postac.statystyki.atak = 7;
-        postac.statystyki.obrona = 7;
-        postac.statystyki.perswazja = 4;
+        postac.statystyki.atak = 11;
+        postac.statystyki.obrona = 10;
+        postac.statystyki.perswazja = 9;
     }
 
     public void wybierzEkwipunek() {
-        postac.ekwipunek.akceptowaneTypyBroni.add(1);
         postac.ekwipunek.akceptowaneTypyBroni.add(3);
+        postac.ekwipunek.akceptowaneTypyBroni.add(5);
 
-        Bron topor = new Miecz();
+        Bron topor = new Topor();
         postac.ekwipunek.dodajBron(postac, topor);
     }
 

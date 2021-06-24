@@ -7,7 +7,7 @@ public class Menu {
         System.out.println("Witaj w grze tekstowej ŚREDNIOWIECZE");
         System.out.println("Wybierz pozycje z menu: ");
         System.out.println("1. Stwórz postać");
-        System.out.println("2. Wyjdź");
+        System.out.println("2. Wyjdź \n");
 
         Scanner scanner = new Scanner(System.in);
         int wybor = scanner.nextInt();
@@ -23,7 +23,27 @@ public class Menu {
 
         Plansza plansza = new Plansza();
 
-        BudowniczyPostaci budowniczyPostaci = new BudowniczyWojownika();
+        System.out.println("Wybierz klase: ");
+        System.out.println("1. Wojownik");
+        System.out.println("2. Paladyn");
+        System.out.println("3. Czarnoksieznik \n");
+
+        BudowniczyPostaci budowniczyPostaci;
+        int wybranaKlasa = scanner.nextInt();
+        switch (wybranaKlasa) {
+            case 1:
+                budowniczyPostaci = new BudowniczyWojownika();
+                break;
+            case 2:
+                budowniczyPostaci = new BudowniczyPaladyna();
+                break;
+            case 3:
+                budowniczyPostaci = new BudowniczyCzarnoksieznika();
+                break;
+            default:
+                budowniczyPostaci = new BudowniczyWojownika();
+        }
+
         Postac postac;
         budowniczyPostaci.wybierzImie();
         budowniczyPostaci.wybierzStatystyki();

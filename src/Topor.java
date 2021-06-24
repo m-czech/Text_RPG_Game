@@ -3,7 +3,7 @@ public class Topor implements Bron{
     String nazwa;
     static int id = 3;
     Topor() {
-        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,0,0,0,0);
+        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 3,-2,-2,0,0);
         nazwa = "topor";
     }
 
@@ -23,7 +23,6 @@ public class Topor implements Bron{
         if (postac.statystyki.atak < 0) {
             postac.statystyki.atak = 0;
         }
-
     }
 
     public String zwrocNazweBroni() {

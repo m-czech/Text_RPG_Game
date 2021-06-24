@@ -42,7 +42,7 @@ public class Ekwipunek {
         }
 
         if (pierwszySlot == nowaBron || drugiSlot == nowaBron) {
-            System.out.println("Nowy " + nowaBron.zwrocNazweBroni() + " znajduje sie w ekwipunku");
+            System.out.println("Nowy " + nowaBron.zwrocNazweBroni() + " znajduje sie w ekwipunku \n");
         }
 
     }

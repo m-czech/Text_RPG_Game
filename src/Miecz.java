@@ -3,7 +3,7 @@ public class Miecz implements Bron {
     String nazwa;
     static int id = 1;
     Miecz() {
-        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0,0,0,0,0);
+        statystyki = new Statystyki(0,Math.abs(RandomNumberGenerator.randomNumberGenerator.nextInt()) % 5,0,-3,-3,0,0);
         nazwa = "miecz";
     }
 
@@ -16,10 +16,6 @@ public class Miecz implements Bron {
         if (postac.statystyki.atak < 0) {
             postac.statystyki.atak = 0;
         }
-    }
-
-    public static int zwrocIdBroni() {
-        return id;
     }
 
     public String zwrocNazweBroni() {
